@@ -1,6 +1,11 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=73 format=4 uid="uid://bhnvfig8rs04g"]
+=======
+[gd_scene load_steps=78 format=4 uid="uid://bhnvfig8rs04g"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://3pbqpcpffpyb" path="res://Assets/kenney_sports-pack/Tilesheet/groundGrass.png" id="1_4qq7b"]
+[ext_resource type="Script" uid="uid://8omlpaixlw72" path="res://Scripts/tilemap.gd" id="1_f8k6d"]
 [ext_resource type="Texture2D" uid="uid://dw8hjd457s4r0" path="res://Assets/kenney_sports-pack/Tilesheet/groundBeige_blue.png" id="2_75hpu"]
 [ext_resource type="Texture2D" uid="uid://c8amok0ylti8h" path="res://Assets/kenney_sports-pack/Tilesheet/groundGravel.png" id="3_bi1hd"]
 [ext_resource type="Texture2D" uid="uid://blrjsft88bcm7" path="res://Assets/kenney_sports-pack/Tilesheet/elements.png" id="4_boyy8"]
@@ -8,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://ccbdo8t46rja5" path="res://Assets/kenney_sports-pack/Tilesheet/groundGrass_mown.png" id="6_symy8"]
 [ext_resource type="Texture2D" uid="uid://cxg03wlueqrri" path="res://Assets/kenney_sports-pack/Tilesheet/groundIce_red.png" id="7_75hpu"]
 [ext_resource type="Texture2D" uid="uid://cgj5gbv0wd38y" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (1) Sheet.png" id="8_bi1hd"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://6eiaw7m0ntao" path="res://GameObject/Player1.tscn" id="8_qqp52"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" uid="uid://bry32xyvtdlsd" path="res://Scripts/a_1.gd" id="9_bhngk"]
 [ext_resource type="Texture2D" uid="uid://j6a0bkvgo35d" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (8) Sheet.png" id="9_ehoth"]
 [ext_resource type="Texture2D" uid="uid://bih8qeul4cxc7" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (2) Sheet.png" id="10_nkvct"]
@@ -17,7 +26,15 @@
 [ext_resource type="Texture2D" uid="uid://cm3h7vmf87whq" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Soccer Audience Cheering (2) Sheet.png" id="13_65wvw"]
 [ext_resource type="Texture2D" uid="uid://dbouas1nmh2ot" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Soccer Audience Cheering (10) Sheet.png" id="14_l3bdc"]
 [ext_resource type="AudioStream" uid="uid://4fmemvejiqy0" path="res://Assets/audio/Ludum Dare 30 04.ogg" id="17_65wvw"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://bxy1j6n32528h" path="res://Scripts/audio_stream_player.gd" id="18_l3bdc"]
+=======
+[ext_resource type="PackedScene" uid="uid://de1ii4dpgrhbn" path="res://GameObject/ball.tscn" id="19_qqp52"]
+[ext_resource type="PackedScene" uid="uid://d2nec20vsocfh" path="res://GameObject/Player2.tscn" id="21_f8k6d"]
+[ext_resource type="Script" uid="uid://cdrh1ph1f8hsi" path="res://Scripts/player2.gd" id="22_3a6fx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qqp52"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hptm8"]
 texture = ExtResource("1_4qq7b")
@@ -17867,6 +17884,7 @@ animations = [{
 }]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_f8k6d")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wsu2k")
@@ -17985,4 +18003,23 @@ frame_progress = 0.23039429
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_65wvw")
 autoplay = true
+<<<<<<< Updated upstream
 script = ExtResource("18_l3bdc")
+=======
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(326, 192)
+offset = Vector2(-10, 0)
+anchor_mode = 0
+zoom = Vector2(0.45, 0.425)
+
+[node name="ball" parent="." instance=ExtResource("19_qqp52")]
+position = Vector2(637, 415)
+
+[node name="player1" parent="." instance=ExtResource("8_qqp52")]
+position = Vector2(605, 405)
+
+[node name="player2" parent="." instance=ExtResource("21_f8k6d")]
+position = Vector2(670, 405)
+script = ExtResource("22_3a6fx")
+>>>>>>> Stashed changes
