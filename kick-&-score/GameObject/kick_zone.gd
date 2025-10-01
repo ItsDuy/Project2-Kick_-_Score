@@ -24,23 +24,3 @@ func _on_ball_exit(body):
 	if body.name == "ball":
 		is_in_contact_with_ball=false
 		ball_body=null
-<<<<<<< HEAD
-=======
-
-func _process(delta):
-	if is_in_contact_with_ball:
-		if Input.is_action_pressed("ui_accept"):
-			print("Accumulate")
-			kick_force += charge_rate*delta
-			kick_force = min(max_kick_force,kick_force)
-		
-		if Input.is_action_just_released("ui_accept"):
-			print("Kick the ball")
-			kick_ball()
-			kick_force=0
-			
-func kick_ball():
-	if ball_body:
-		var dir=(ball_body.global_position -global_position).normalized()
-		ball_body.apply_impulse(Vector2.ZERO, dir * kick_force)
->>>>>>> eaeffe30bffcad2c8350fb48646987fc3e35953b
