@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://d2nec20vsocfh"]
+[gd_scene load_steps=29 format=3 uid="uid://d2nec20vsocfh"]
 
 [ext_resource type="Script" uid="uid://cdrh1ph1f8hsi" path="res://Scripts/player2.gd" id="1_rlpa5"]
+[ext_resource type="Script" uid="uid://bcg0t3nwkp1fb" path="res://GameObject/gymos_circle2.gd" id="2_lryyh"]
 [ext_resource type="Texture2D" uid="uid://t8x058er6iya" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/idle.png" id="2_rlpa5"]
 [ext_resource type="Texture2D" uid="uid://bd2vkdn70225k" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/back.png" id="3_lryyh"]
 [ext_resource type="Texture2D" uid="uid://dhflx3bdkrd1f" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/front.png" id="4_xc4xq"]
@@ -171,6 +172,10 @@ radius = 7.071068
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_rlpa5")
+
+[node name="GymosCircle" type="Node2D" parent="."]
+position = Vector2(0, 9)
+script = ExtResource("2_lryyh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)

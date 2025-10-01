@@ -4,7 +4,7 @@ extends CharacterBody2D
 # Speed 
 const SPEED = 100.0
 const GAIN := 0.75            			# rate: ball ≈ GAIN * player_velocity
-const MAX_BALL_SPEED := 500  			# max velocity for the ball (px/s)
+const MAX_BALL_SPEED := 200  			# max velocity for the ball (px/s)
 const SPRINT_MULT := 1.8
 # Stamina
 const MAX_STAMINA := 100.0
@@ -80,6 +80,37 @@ func player_movement(delta: float) -> void:
 	play_anim()
 
 func handle_ball_interaction() -> void:
+	# Check for ball collision
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		
+		if collider is RigidBody2D and collider.is_in_group("ball"):
+			ball = collider
+			pushing_ball=true
+			
+			# Calculate kick force based on player's velocity and direction
+			var kick_force = velocity.normalized() * (SPEED * GAIN)
+			if sprint:
+				kick_force *= SPRINT_MULT
+			
+			# IMPORTANT: Don't add to the ball's existing velocity, just set it
+			# This prevents the compounding speed effect
+			ball.linear_velocity = kick_force
+			
+			# Apply a small impulse for better feel, but reduce the multiplier
+			ball.apply_impulse(velocity.normalized() * GAIN * 5)
+			
+			# Add this: prevent the player from being pushed by the ball
+			# by slightly adjusting the player's position away from the ball
+			var push_vector = (global_position - ball.global_position).normalized() * 1.0
+			global_position += push_vector
+	
+	# Reset pushing_ball if we're not colliding with the ball anymore
+	if pushing_ball and get_slide_collision_count() == 0:
+		pushing_ball = false
+		ball = null
+
 	# Check for ball collision
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
