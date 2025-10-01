@@ -7,12 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://c3q8tmskkdykf" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Environment/Soccorpia Stadium Tiles.png" id="5_fctyr"]
 [ext_resource type="Texture2D" uid="uid://ccbdo8t46rja5" path="res://Assets/kenney_sports-pack/Tilesheet/groundGrass_mown.png" id="6_symy8"]
 [ext_resource type="Texture2D" uid="uid://cxg03wlueqrri" path="res://Assets/kenney_sports-pack/Tilesheet/groundIce_red.png" id="7_75hpu"]
-[ext_resource type="Script" uid="uid://bbnlba88tgdqj" path="res://Scenes/goal_1.gd" id="8_3a6fx"]
+[ext_resource type="Script" path="res://Scenes/goal_1.gd" id="8_3a6fx"]
 [ext_resource type="Texture2D" uid="uid://cgj5gbv0wd38y" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (1) Sheet.png" id="8_bi1hd"]
-[ext_resource type="PackedScene" uid="uid://6eiaw7m0ntao" path="res://GameObject/Player1.tscn" id="8_qqp52"]
 [ext_resource type="Script" uid="uid://bry32xyvtdlsd" path="res://Scripts/a_1.gd" id="9_bhngk"]
 [ext_resource type="Texture2D" uid="uid://j6a0bkvgo35d" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (8) Sheet.png" id="9_ehoth"]
-[ext_resource type="Script" uid="uid://dy3vxgmtp6jo6" path="res://Scenes/goal_2.gd" id="9_gk80j"]
+[ext_resource type="Script" path="res://Scenes/goal_2.gd" id="9_gk80j"]
 [ext_resource type="Texture2D" uid="uid://bih8qeul4cxc7" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (2) Sheet.png" id="10_nkvct"]
 [ext_resource type="Texture2D" uid="uid://c7xd6v3cybegm" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (10) Sheet.png" id="10_vyly5"]
 [ext_resource type="Texture2D" uid="uid://oubpkuj5ej63" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Soccer Audience Booing (4) Sheet.png" id="11_vyly5"]
@@ -22,7 +21,8 @@
 [ext_resource type="AudioStream" uid="uid://4fmemvejiqy0" path="res://Assets/audio/Ludum Dare 30 04.ogg" id="17_65wvw"]
 [ext_resource type="Script" uid="uid://bxy1j6n32528h" path="res://Scripts/audio_stream_player.gd" id="18_l3bdc"]
 [ext_resource type="PackedScene" uid="uid://cwlu27850s3j5" path="res://GameObject/ball.tscn" id="19_qqp52"]
-[ext_resource type="PackedScene" uid="uid://d2nec20vsocfh" path="res://GameObject/Player2.tscn" id="21_f8k6d"]
+[ext_resource type="PackedScene" path="res://GameObject/Player2.tscn" id="21_f8k6d"]
+[ext_resource type="PackedScene" uid="uid://ttpquodw7sx" path="res://GameObject/Player1.tscn" id="22_kqfkx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qqp52"]
 
@@ -18155,8 +18155,8 @@ zoom = Vector2(0.45, 0.425)
 [node name="ball" parent="." instance=ExtResource("19_qqp52")]
 position = Vector2(637, 415)
 
-[node name="player1" parent="." instance=ExtResource("8_qqp52")]
-position = Vector2(605, 405)
-
 [node name="player2" parent="." instance=ExtResource("21_f8k6d")]
 position = Vector2(670, 405)
+
+[node name="player1" parent="." instance=ExtResource("22_kqfkx")]
+position = Vector2(605, 405)

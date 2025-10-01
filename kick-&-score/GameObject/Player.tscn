@@ -1,15 +1,13 @@
-[gd_scene load_steps=29 format=3 uid="uid://ttpquodw7sx"]
+[gd_scene load_steps=26 format=3 uid="uid://6eiaw7m0ntao"]
 
 [ext_resource type="Script" uid="uid://br3o0a08ocy0v" path="res://Scripts/player1.gd" id="1_6iuh6"]
 [ext_resource type="Texture2D" uid="uid://h0xgxlhtefob" path="res://Assets/Free Football Assets/Footballers/Argentina/idle.png" id="1_6wbdd"]
 [ext_resource type="Texture2D" uid="uid://b44b6elumb25i" path="res://Assets/Free Football Assets/Footballers/Argentina/back.png" id="2_6iuh6"]
 [ext_resource type="Texture2D" uid="uid://c8gqhp1t4rdt6" path="res://Assets/Free Football Assets/Footballers/Argentina/front.png" id="3_7tsdg"]
 [ext_resource type="Texture2D" uid="uid://bwm3hprh6wp2k" path="res://Assets/Free Football Assets/Footballers/Argentina/walk.png" id="4_tcgth"]
-[ext_resource type="Script" uid="uid://bsbmrml6o45dv" path="res://GameObject/kick_zone.gd" id="6_7tsdg"]
-[ext_resource type="Script" uid="uid://n6qi3grmnv85" path="res://GameObject/gymos_circle1.gd" id="7_vhoab"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p2i75"]
-height = 22.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iuh6"]
+size = Vector2(14, 5.000001)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8trj2"]
 atlas = ExtResource("1_6wbdd")
@@ -167,23 +165,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6iuh6"]
-radius = 7.071068
-
 [node name="player" type="CharacterBody2D"]
-collision_layer = 2
-safe_margin = 0.1
 script = ExtResource("1_6iuh6")
 
-[node name="GymosCircle" type="Node2D" parent="."]
-position = Vector2(0, 9)
-script = ExtResource("7_vhoab")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-y_sort_enabled = true
-position = Vector2(-7.54979e-08, 4.5)
+position = Vector2(2.3841858e-07, 11.500002)
 rotation = 3.1415925
-shape = SubResource("CapsuleShape2D_p2i75")
+shape = SubResource("RectangleShape2D_6iuh6")
 one_way_collision = true
 debug_color = Color(0.6554663, 0.4702894, 0.58376086, 0.41960785)
 
@@ -204,11 +192,3 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_7tsdg")
 step = 1.0
 value = 100.0
 show_percentage = false
-
-[node name="KickZone" type="Area2D" parent="."]
-position = Vector2(16, 10)
-script = ExtResource("6_7tsdg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KickZone"]
-position = Vector2(-7, -1)
-shape = SubResource("CircleShape2D_6iuh6")
