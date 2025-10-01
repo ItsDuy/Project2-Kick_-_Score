@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cikjw1c1ayvhy"]
+[gd_scene load_steps=8 format=3 uid="uid://cikjw1c1ayvhy"]
 
 [ext_resource type="Script" uid="uid://bdum3s72r61pn" path="res://Scripts/menu.gd" id="1_wfiwe"]
 [ext_resource type="Texture2D" uid="uid://cj0eeti4u6e3" path="res://Assets/cr7_is_real_goat/pepsi.png" id="3_4hkxj"]
 [ext_resource type="FontFile" uid="uid://djbq4b2hbstmk" path="res://Assets/fonts/Pixellari.ttf" id="3_qmqfe"]
+[ext_resource type="Texture2D" uid="uid://m6llx84brofo" path="res://Assets/cr7_is_real_goat/cup.png" id="4_qmqfe"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hkxj"]
 texture = ExtResource("3_4hkxj")
@@ -17,6 +18,9 @@ corner_radius_bottom_left = 8
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e05sn"]
+texture = ExtResource("4_qmqfe")
+
 [node name="Menu" type="Node2D"]
 position = Vector2(3, 0)
 script = ExtResource("1_wfiwe")
@@ -27,7 +31,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="argentina" type="Panel" parent="Control"]
 layout_mode = 0
 offset_left = -2.0
 offset_right = 287.0
@@ -50,24 +54,44 @@ grow_vertical = 2
 
 [node name="Start" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_colors/font_color = Color(1, 0.09411765, 0.09411765, 1)
 theme_override_fonts/font = ExtResource("3_qmqfe")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_4hkxj")
 text = "Start"
 
-[node name="Quit" type="Button" parent="Control/VBoxContainer"]
+[node name="Options" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_colors/font_color = Color(1, 0.09411765, 0.09411765, 1)
 theme_override_fonts/font = ExtResource("3_qmqfe")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_4hkxj")
 text = "Options"
 
-[node name="Options" type="Button" parent="Control/VBoxContainer"]
+[node name="Quit" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_colors/font_color = Color(1, 0.09411765, 0.09411765, 1)
 theme_override_fonts/font = ExtResource("3_qmqfe")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_4hkxj")
 text = "Quit"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 24.0
+offset_right = 286.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(1, 0, 0.21568628, 1)
+theme_override_fonts/font = ExtResource("3_qmqfe")
+theme_override_font_sizes/font_size = 16
+text = "			Tiny Football
+World Cup 2020 Remake Version"
+horizontal_alignment = 1
+
+[node name="cup" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 38.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_e05sn")
