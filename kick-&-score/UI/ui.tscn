@@ -3,22 +3,6 @@
 [ext_resource type="Script" uid="uid://d10skp8qhmcya" path="res://Scripts/ui.gd" id="1_dajm1"]
 [ext_resource type="Texture2D" uid="uid://bc1h5lqsw7wtf" path="res://Assets/cr7_is_real_goat/intro.png" id="2_e6gg6"]
 
-[sub_resource type="Animation" id="Animation_hat8c"]
-resource_name = "fade_in"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(1, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.012617188, 0.012617188, 0.012617188, 1), Color(0, 0, 0, 0.023529412)]
-}
-
 [sub_resource type="Animation" id="Animation_3sbvi"]
 length = 0.001
 tracks/0/type = "value"
@@ -37,6 +21,22 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_nm1m0"]
 resource_name = "fade_down"
 length = 3.0
+
+[sub_resource type="Animation" id="Animation_hat8c"]
+resource_name = "fade_in"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.012617188, 0.012617188, 0.012617188, 1), Color(0, 0, 0, 0.023529412)]
+}
 
 [sub_resource type="Animation" id="Animation_c7tqi"]
 resource_name = "fado_out"
@@ -71,10 +71,10 @@ scale = Vector2(0.8831691, 0.60909516)
 texture = ExtResource("2_e6gg6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -1864.0
-offset_top = -1058.0
-offset_right = 2531.0
-offset_bottom = 1637.0
+offset_left = -1672.0
+offset_top = -988.0
+offset_right = 2723.0
+offset_bottom = 1707.0
 color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
