@@ -146,6 +146,6 @@ func stamina_bar(delta: float) -> void:
 	else:
 		stamina += (STAMINA_RECOVER_MOVE if movement else STAMINA_RECOVER_IDLE) * delta
 
-	stamina = clamp(stamina, 0.0, MAX_STAMINA)  # chỉ cần 1 lần
+	stamina = clamp(stamina, 0.0, MAX_STAMINA)  
 	bar.value = stamina
 	

@@ -1,30 +1,30 @@
-[gd_scene load_steps=28 format=3 uid="uid://d2nec20vsocfh"]
+[gd_scene load_steps=28 format=3 uid="uid://c5ilymks4lj5n"]
 
-[ext_resource type="Script" uid="uid://cdrh1ph1f8hsi" path="res://Scripts/player2.gd" id="1_rlpa5"]
-[ext_resource type="Texture2D" uid="uid://t8x058er6iya" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/idle.png" id="2_rlpa5"]
+[ext_resource type="Script" path="res://Scripts/player2.gd" id="1_rlpa5"]
+[ext_resource type="Texture2D" uid="uid://ke01mo068dqt" path="res://Assets/Free Football Assets/Obstacles/FrancePlayer/idle.png" id="2_rlpa5"]
 [ext_resource type="Texture2D" uid="uid://bd2vkdn70225k" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/back.png" id="3_lryyh"]
 [ext_resource type="Texture2D" uid="uid://dhflx3bdkrd1f" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/front.png" id="4_xc4xq"]
-[ext_resource type="Texture2D" uid="uid://bo2wpekjscqvo" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/walk.png" id="5_5lvck"]
-[ext_resource type="Script" uid="uid://bsbmrml6o45dv" path="res://GameObject/kick_zone.gd" id="6_07chc"]
+[ext_resource type="Texture2D" uid="uid://s3kgh1eba0xx" path="res://Assets/Free Football Assets/Obstacles/FrancePlayer/walk.png" id="5_lryyh"]
+[ext_resource type="Script" path="res://GameObject/kick_zone.gd" id="6_07chc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rlpa5"]
 height = 22.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc4xq"]
+atlas = ExtResource("2_rlpa5")
+region = Rect2(0, 0, 13, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lvck"]
+atlas = ExtResource("2_rlpa5")
+region = Rect2(13, 0, 13, 20)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrw08"]
 atlas = ExtResource("2_rlpa5")
-region = Rect2(0, 0, 13, 19)
+region = Rect2(26, 0, 13, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_07chc"]
 atlas = ExtResource("2_rlpa5")
-region = Rect2(13, 0, 13, 19)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wbh6q"]
-atlas = ExtResource("2_rlpa5")
-region = Rect2(26, 0, 13, 19)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x0e2o"]
-atlas = ExtResource("2_rlpa5")
-region = Rect2(39, 0, 13, 19)
+region = Rect2(39, 0, 13, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8btgu"]
 atlas = ExtResource("3_lryyh")
@@ -58,36 +58,36 @@ region = Rect2(26, 0, 13, 19)
 atlas = ExtResource("4_xc4xq")
 region = Rect2(39, 0, 13, 19)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbh6q"]
+atlas = ExtResource("5_lryyh")
+region = Rect2(0, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0e2o"]
+atlas = ExtResource("5_lryyh")
+region = Rect2(15, 0, 15, 20)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kujh7"]
-atlas = ExtResource("5_5lvck")
-region = Rect2(0, 0, 15, 19)
+atlas = ExtResource("5_lryyh")
+region = Rect2(30, 0, 15, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d3i7q"]
-atlas = ExtResource("5_5lvck")
-region = Rect2(15, 0, 15, 19)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ggvj5"]
-atlas = ExtResource("5_5lvck")
-region = Rect2(30, 0, 15, 19)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ut38b"]
-atlas = ExtResource("5_5lvck")
-region = Rect2(45, 0, 15, 19)
+atlas = ExtResource("5_lryyh")
+region = Rect2(45, 0, 15, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lxa44"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xc4xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lvck")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_qrw08")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_07chc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wbh6q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x0e2o")
 }],
 "loop": true,
 "name": &"idle",
@@ -129,16 +129,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wbh6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0e2o")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_kujh7")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d3i7q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ggvj5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ut38b")
 }],
 "loop": true,
 "name": &"walk_side",
@@ -183,7 +183,8 @@ debug_color = Color(0.6554663, 0.4702894, 0.58376086, 0.41960785)
 position = Vector2(0, -0.12499952)
 scale = Vector2(1.5, 1.4868422)
 sprite_frames = SubResource("SpriteFrames_lxa44")
-animation = &"walk_side"
+animation = &"idle"
+frame_progress = 0.88749397
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = -14.0

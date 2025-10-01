@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://cikjw1c1ayvhy"]
+
+[ext_resource type="Script" uid="uid://bdum3s72r61pn" path="res://Scripts/menu.gd" id="1_wfiwe"]
+[ext_resource type="Texture2D" uid="uid://cj0eeti4u6e3" path="res://Assets/cr7_is_real_goat/pepsi.png" id="3_4hkxj"]
+[ext_resource type="FontFile" uid="uid://djbq4b2hbstmk" path="res://Assets/fonts/Pixellari.ttf" id="3_qmqfe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hkxj"]
+texture = ExtResource("3_4hkxj")
+modulate_color = Color(0.3924328, 0.3924328, 0.3924328, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hkxj"]
+bg_color = Color(18.892157, 18.892157, 18.892157, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[node name="Menu" type="Node2D"]
+position = Vector2(3, 0)
+script = ExtResource("1_wfiwe")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 287.0
+offset_bottom = 166.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4hkxj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.7500002
+anchor_top = 1.0
+anchor_right = -3.7500002
+anchor_bottom = 1.0
+offset_left = 230.00002
+offset_top = 54.0
+offset_right = 356.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_fonts/font = ExtResource("3_qmqfe")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hkxj")
+text = "Start"
+
+[node name="Quit" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_fonts/font = ExtResource("3_qmqfe")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hkxj")
+text = "Options"
+
+[node name="Options" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_fonts/font = ExtResource("3_qmqfe")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hkxj")
+text = "Quit"

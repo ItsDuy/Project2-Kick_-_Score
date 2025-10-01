@@ -1,18 +1,19 @@
-[gd_scene load_steps=80 format=4 uid="uid://bhnvfig8rs04g"]
+[gd_scene load_steps=83 format=4 uid="uid://bhnvfig8rs04g"]
 
 [ext_resource type="Texture2D" uid="uid://3pbqpcpffpyb" path="res://Assets/kenney_sports-pack/Tilesheet/groundGrass.png" id="1_4qq7b"]
+[ext_resource type="Script" uid="uid://bp4f6xnveebvp" path="res://Scenes/tilemap.gd" id="1_r3ohy"]
 [ext_resource type="Texture2D" uid="uid://dw8hjd457s4r0" path="res://Assets/kenney_sports-pack/Tilesheet/groundBeige_blue.png" id="2_75hpu"]
+[ext_resource type="Texture2D" uid="uid://hn11olm64gvx" path="res://Assets/cr7_is_real_goat/pessi1.png" id="2_kqfkx"]
 [ext_resource type="Texture2D" uid="uid://c8amok0ylti8h" path="res://Assets/kenney_sports-pack/Tilesheet/groundGravel.png" id="3_bi1hd"]
 [ext_resource type="Texture2D" uid="uid://blrjsft88bcm7" path="res://Assets/kenney_sports-pack/Tilesheet/elements.png" id="4_boyy8"]
 [ext_resource type="Texture2D" uid="uid://c3q8tmskkdykf" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Environment/Soccorpia Stadium Tiles.png" id="5_fctyr"]
 [ext_resource type="Texture2D" uid="uid://ccbdo8t46rja5" path="res://Assets/kenney_sports-pack/Tilesheet/groundGrass_mown.png" id="6_symy8"]
 [ext_resource type="Texture2D" uid="uid://cxg03wlueqrri" path="res://Assets/kenney_sports-pack/Tilesheet/groundIce_red.png" id="7_75hpu"]
-[ext_resource type="Script" uid="uid://bbnlba88tgdqj" path="res://Scenes/goal_1.gd" id="8_3a6fx"]
 [ext_resource type="Texture2D" uid="uid://cgj5gbv0wd38y" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (1) Sheet.png" id="8_bi1hd"]
-[ext_resource type="PackedScene" uid="uid://6eiaw7m0ntao" path="res://GameObject/Player1.tscn" id="8_qqp52"]
+[ext_resource type="Script" uid="uid://bbnlba88tgdqj" path="res://Scripts/goal_1.gd" id="8_gk80j"]
 [ext_resource type="Script" uid="uid://bry32xyvtdlsd" path="res://Scripts/a_1.gd" id="9_bhngk"]
 [ext_resource type="Texture2D" uid="uid://j6a0bkvgo35d" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (8) Sheet.png" id="9_ehoth"]
-[ext_resource type="Script" uid="uid://dy3vxgmtp6jo6" path="res://Scenes/goal_2.gd" id="9_gk80j"]
+[ext_resource type="Script" uid="uid://dy3vxgmtp6jo6" path="res://Scripts/goal_2.gd" id="9_r3ohy"]
 [ext_resource type="Texture2D" uid="uid://bih8qeul4cxc7" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (2) Sheet.png" id="10_nkvct"]
 [ext_resource type="Texture2D" uid="uid://c7xd6v3cybegm" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Competitor Audience Booing (10) Sheet.png" id="10_vyly5"]
 [ext_resource type="Texture2D" uid="uid://oubpkuj5ej63" path="res://Assets/Soccorpia Asset Pack/Soccorpia Asset Pack/Audience Sheets/Soccer Audience Booing (4) Sheet.png" id="11_vyly5"]
@@ -22,7 +23,12 @@
 [ext_resource type="AudioStream" uid="uid://4fmemvejiqy0" path="res://Assets/audio/Ludum Dare 30 04.ogg" id="17_65wvw"]
 [ext_resource type="Script" uid="uid://bxy1j6n32528h" path="res://Scripts/audio_stream_player.gd" id="18_l3bdc"]
 [ext_resource type="PackedScene" uid="uid://cwlu27850s3j5" path="res://GameObject/ball.tscn" id="19_qqp52"]
-[ext_resource type="PackedScene" uid="uid://d2nec20vsocfh" path="res://GameObject/Player2.tscn" id="21_f8k6d"]
+[ext_resource type="PackedScene" uid="uid://c5ilymks4lj5n" path="res://GameObject/Player2.tscn" id="21_f8k6d"]
+[ext_resource type="PackedScene" uid="uid://qtqqo63pjqih" path="res://GameObject/Player1.tscn" id="22_kqfkx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4cen"]
+texture = ExtResource("2_kqfkx")
+modulate_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qqp52"]
 
@@ -18007,9 +18013,25 @@ animations = [{
 }]
 
 [node name="Main" type="Node2D"]
+position = Vector2(576, 320)
+script = ExtResource("1_r3ohy")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = -848.0
+offset_top = -328.0
+offset_right = 712.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_l4cen")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(462, 283)
+position = Vector2(-174, -133)
 tile_set = SubResource("TileSet_wsu2k")
 format = 2
 
@@ -18041,7 +18063,7 @@ tile_map_data = PackedByteArray("AAD5/woAAwAXABAAAAD6/woAAwAXABAAAAD4/woAAwARABQ
 tile_set = SubResource("TileSet_wsu2k")
 
 [node name="Goal1" type="Area2D" parent="TileMap/Goals"]
-script = ExtResource("8_3a6fx")
+script = ExtResource("8_gk80j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Goals/Goal1"]
 position = Vector2(-101.5, 128)
@@ -18049,7 +18071,7 @@ shape = SubResource("RectangleShape2D_f8k6d")
 
 [node name="Goal2" type="Area2D" parent="TileMap/Goals"]
 position = Vector2(538, 0)
-script = ExtResource("9_gk80j")
+script = ExtResource("9_r3ohy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Goals/Goal2"]
 position = Vector2(-101.5, 128)
@@ -18067,7 +18089,7 @@ tile_map_data = PackedByteArray("AAD6/wAABgAIABYAAAD6/wEABgAIABYAAAD6/wIABgAIABY
 tile_set = SubResource("TileSet_wsu2k")
 
 [node name="Audience" type="Node2D" parent="."]
-position = Vector2(456, 300)
+position = Vector2(-180, -116)
 
 [node name="A1" type="Node2D" parent="Audience"]
 position = Vector2(76, -1)
@@ -18146,17 +18168,14 @@ stream = ExtResource("17_65wvw")
 autoplay = true
 script = ExtResource("18_l3bdc")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(326, 192)
-offset = Vector2(-10, 0)
-anchor_mode = 0
-zoom = Vector2(0.45, 0.425)
-
 [node name="ball" parent="." instance=ExtResource("19_qqp52")]
-position = Vector2(637, 415)
+position = Vector2(1, -1)
 
-[node name="player1" parent="." instance=ExtResource("8_qqp52")]
-position = Vector2(605, 405)
+[node name="player1" parent="." instance=ExtResource("22_kqfkx")]
+position = Vector2(-29, -11)
 
 [node name="player2" parent="." instance=ExtResource("21_f8k6d")]
-position = Vector2(670, 405)
+position = Vector2(34, -11)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.35, 0.35)
