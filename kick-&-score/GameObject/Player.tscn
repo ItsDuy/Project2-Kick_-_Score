@@ -1,5 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://6eiaw7m0ntao"]
 
+
 [ext_resource type="Script" uid="uid://br3o0a08ocy0v" path="res://Scripts/player1.gd" id="1_6iuh6"]
 [ext_resource type="Texture2D" uid="uid://h0xgxlhtefob" path="res://Assets/Free Football Assets/Footballers/Argentina/idle.png" id="1_6wbdd"]
 [ext_resource type="Texture2D" uid="uid://b44b6elumb25i" path="res://Assets/Free Football Assets/Footballers/Argentina/back.png" id="2_6iuh6"]
