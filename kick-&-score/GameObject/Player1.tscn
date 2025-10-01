@@ -4,6 +4,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://qtqqo63pjqih"]
 >>>>>>> eaeffe30bffcad2c8350fb48646987fc3e35953b
 
+[ext_resource type="Script" uid="uid://br3o0a08ocy0v" path="res://Scripts/player1.gd" id="1_6iuh6"]
 [ext_resource type="Texture2D" uid="uid://h0xgxlhtefob" path="res://Assets/Free Football Assets/Footballers/Argentina/idle.png" id="1_6wbdd"]
 [ext_resource type="Script" uid="uid://br3o0a08ocy0v" path="res://Scripts/player1.gd" id="1_p2i75"]
 [ext_resource type="Texture2D" uid="uid://b44b6elumb25i" path="res://Assets/Free Football Assets/Footballers/Argentina/back.png" id="2_6iuh6"]
@@ -181,6 +182,7 @@ radius = 7.071068
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
 safe_margin = 0.1
+script = ExtResource("1_6iuh6")
 script = ExtResource("1_p2i75")
 
 [node name="GymosCircle" type="Node2D" parent="."]
