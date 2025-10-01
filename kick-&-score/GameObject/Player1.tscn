@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 [gd_scene load_steps=29 format=3 uid="uid://6eiaw7m0ntao"]
-=======
-[gd_scene load_steps=28 format=3 uid="uid://qtqqo63pjqih"]
->>>>>>> eaeffe30bffcad2c8350fb48646987fc3e35953b
 
 [ext_resource type="Script" uid="uid://br3o0a08ocy0v" path="res://Scripts/player1.gd" id="1_6iuh6"]
 [ext_resource type="Texture2D" uid="uid://h0xgxlhtefob" path="res://Assets/Free Football Assets/Footballers/Argentina/idle.png" id="1_6wbdd"]
-[ext_resource type="Script" uid="uid://br3o0a08ocy0v" path="res://Scripts/player1.gd" id="1_p2i75"]
 [ext_resource type="Texture2D" uid="uid://b44b6elumb25i" path="res://Assets/Free Football Assets/Footballers/Argentina/back.png" id="2_6iuh6"]
 [ext_resource type="Texture2D" uid="uid://c8gqhp1t4rdt6" path="res://Assets/Free Football Assets/Footballers/Argentina/front.png" id="3_7tsdg"]
 [ext_resource type="Texture2D" uid="uid://bwm3hprh6wp2k" path="res://Assets/Free Football Assets/Footballers/Argentina/walk.png" id="4_tcgth"]
-<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://bsbmrml6o45dv" path="res://GameObject/kick_zone.gd" id="6_7tsdg"]
 [ext_resource type="Script" uid="uid://n6qi3grmnv85" path="res://GameObject/gymos_circle1.gd" id="7_vhoab"]
-=======
-[ext_resource type="Script" path="res://GameObject/kick_zone.gd" id="6_7tsdg"]
->>>>>>> eaeffe30bffcad2c8350fb48646987fc3e35953b
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p2i75"]
 height = 22.0
@@ -183,7 +174,6 @@ radius = 7.071068
 collision_layer = 2
 safe_margin = 0.1
 script = ExtResource("1_6iuh6")
-script = ExtResource("1_p2i75")
 
 [node name="GymosCircle" type="Node2D" parent="."]
 position = Vector2(0, 9)
