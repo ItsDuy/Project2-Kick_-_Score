@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="Kick_&_Score"
-run/main_scene="uid://bhnvfig8rs04g"
+run/main_scene="uid://c3jsq3ephhbj4"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/stretch/mode="canvas_items"
 window/stretch/scale=4.0
+
+[gui]
+
+common/snap_controls_to_pixels=false
 
 [input]
 
@@ -47,6 +52,11 @@ ui_down={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+]
+}
+ui_key_e={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
 ]
 }
 ui_sprint_1={
@@ -103,4 +113,5 @@ ui_sprint_2={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-viewport/hdr_2d=true
+textures/canvas_textures/default_texture_repeat=1
+2d/snap/snap_2d_transforms_to_pixel=true
