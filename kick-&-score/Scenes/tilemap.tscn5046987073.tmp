@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://bhnvfig8rs04g"]
+[gd_scene load_steps=80 format=4 uid="uid://bhnvfig8rs04g"]
 
 [ext_resource type="Texture2D" uid="uid://3pbqpcpffpyb" path="res://Assets/kenney_sports-pack/Tilesheet/groundGrass.png" id="1_4qq7b"]
 [ext_resource type="Texture2D" uid="uid://dw8hjd457s4r0" path="res://Assets/kenney_sports-pack/Tilesheet/groundBeige_blue.png" id="2_75hpu"]
@@ -23,13 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://d2nec20vsocfh" path="res://GameObject/Player2_1.tscn" id="21_f8k6d"]
 [ext_resource type="PackedScene" uid="uid://c1sfykcgygphy" path="res://GameObject/Player1_2.tscn" id="21_r3ohy"]
 [ext_resource type="PackedScene" uid="uid://divd01agqmnp4" path="res://GameObject/Player1_3.tscn" id="22_kqfkx"]
-[ext_resource type="Script" uid="uid://b1m2moa30vtv0" path="res://Scripts/player1_2.gd" id="22_qb32s"]
-[ext_resource type="Script" uid="uid://bnlr5x8m70dyy" path="res://Scripts/player1_3.gd" id="24_5whq8"]
 [ext_resource type="PackedScene" uid="uid://da0bkkr034hj3" path="res://GameObject/Player2_3.tscn" id="24_l4cen"]
-[ext_resource type="Script" uid="uid://bvj6ofwcpji1w" path="res://Scripts/player_switch_1.gd" id="25_kqfkx"]
-[ext_resource type="Script" uid="uid://0elh0gm8fxd" path="res://Scripts/player2_2.gd" id="26_ob5p8"]
-[ext_resource type="Script" uid="uid://ylunljk80w14" path="res://Scripts/player2_3.gd" id="28_njqfi"]
-[ext_resource type="Script" uid="uid://20esy8p5x2t6" path="res://Scripts/player_switch_2.gd" id="30_ob5p8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qqp52"]
 
@@ -18149,25 +18143,15 @@ position = Vector2(605, 405)
 
 [node name="player1_2" parent="." groups=["player1"] instance=ExtResource("21_r3ohy")]
 position = Vector2(507, 407)
-script = ExtResource("22_qb32s")
 
 [node name="player1_3" parent="." groups=["player1"] instance=ExtResource("22_kqfkx")]
 position = Vector2(421, 405)
-script = ExtResource("24_5whq8")
 
 [node name="player2_1" parent="." groups=["player2"] instance=ExtResource("21_f8k6d")]
 position = Vector2(670, 405)
 
 [node name="player2_2" parent="." groups=["player2"] instance=ExtResource("21_f8k6d")]
 position = Vector2(758, 406)
-script = ExtResource("26_ob5p8")
 
 [node name="player2_3" parent="." groups=["player2"] instance=ExtResource("24_l4cen")]
 position = Vector2(855, 406)
-script = ExtResource("28_njqfi")
-
-[node name="playerSwitch1" type="Node" parent="."]
-script = ExtResource("25_kqfkx")
-
-[node name="Node2" type="Node" parent="."]
-script = ExtResource("30_ob5p8")

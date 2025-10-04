@@ -23,7 +23,7 @@ var ball: RigidBody2D = null
 
 # State
 var movement = false
-var sprint = true	
+var sprint = true
 
 func _ready() -> void:
 	print("Initialize Player object")

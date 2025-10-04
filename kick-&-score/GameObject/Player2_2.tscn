@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://chn78xn7rijj1"]
 
-[ext_resource type="Script" uid="uid://cdrh1ph1f8hsi" path="res://Scripts/player2.gd" id="1_oqyj5"]
+[ext_resource type="Script" uid="uid://cdrh1ph1f8hsi" path="res://Scripts/player2_1.gd" id="1_oqyj5"]
 [ext_resource type="Texture2D" uid="uid://t8x058er6iya" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/idle.png" id="2_p84lr"]
 [ext_resource type="Texture2D" uid="uid://bd2vkdn70225k" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/back.png" id="3_nhn5t"]
 [ext_resource type="Texture2D" uid="uid://dhflx3bdkrd1f" path="res://Assets/Free Football Assets/Footballers/SanLorenzo/front.png" id="4_yrkie"]
